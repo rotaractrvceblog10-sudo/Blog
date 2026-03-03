@@ -18,8 +18,8 @@ export default async function BlogPage() {
                 date: post.entry.date,
                 category: post.entry.category,
                 author: post.entry.author,
-                readingTime,
-            }
+            },
+            readingTime,
         };
     }));
 

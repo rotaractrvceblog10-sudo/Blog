@@ -16,7 +16,7 @@ interface TeamMember {
         instagram: string | null;
         department: string;
         alignment?: 'left' | 'center' | 'right' | 'top' | 'bottom';
-        order?: number;
+        order?: number | null;
     };
 }
 
