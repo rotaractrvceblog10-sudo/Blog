@@ -148,7 +148,9 @@ export default function Home() {
                     Be part of something bigger. Connect with like-minded individuals and make a difference in the world.
                   </p>
                   <Link
-                    href="/about"
+                    href="https://rotaractrvce.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-3 text-lg font-medium text-[#D41367] transition-all hover:scale-105 hover:shadow-xl"
                   >
                     Learn More About Us
