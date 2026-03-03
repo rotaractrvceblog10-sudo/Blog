@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Instagram, Linkedin, Twitter, Mail } from 'lucide-react';
+import { Instagram, Linkedin, Twitter } from 'lucide-react';
 
 export function Footer() {
     const currentYear = new Date().getFullYear();
@@ -64,7 +64,7 @@ export function Footer() {
                         <h3 className="font-bold">Connect With Us</h3>
                         <div className="flex gap-3">
                             <a
-                                href="https://instagram.com"
+                                href="https://www.instagram.com/rotaractrvce"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
@@ -73,7 +73,7 @@ export function Footer() {
                                 <Instagram className="h-5 w-5" />
                             </a>
                             <a
-                                href="https://linkedin.com"
+                                href="https://in.linkedin.com/company/rotaract-club-of-r-v-c-e"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
@@ -82,20 +82,13 @@ export function Footer() {
                                 <Linkedin className="h-5 w-5" />
                             </a>
                             <a
-                                href="https://twitter.com"
+                                href="https://x.com/rotaractrv"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
                                 aria-label="Twitter"
                             >
                                 <Twitter className="h-5 w-5" />
-                            </a>
-                            <a
-                                href="mailto:contact@rotaractrvce.com"
-                                className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
-                                aria-label="Email"
-                            >
-                                <Mail className="h-5 w-5" />
                             </a>
                         </div>
                         <div className="pt-2">
