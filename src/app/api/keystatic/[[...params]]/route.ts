@@ -1,11 +1,7 @@
-import { makeRouteHandler } from '@keystatic/next/route-handler';
-import config from '../../../../../keystatic.config';
+import { NextResponse } from 'next/server';
 
-export const { GET, POST } = makeRouteHandler({
-    config,
-});
-
-// Adding a custom export to verify this file is hit
-export const debug = "ACTIVE_V2";
+export async function GET() {
+    return NextResponse.json({ status: 'API_IS_REACHABLE', timestamp: new Date().toISOString() });
+}
 
 export const dynamic = 'force-dynamic';
