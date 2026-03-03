@@ -37,7 +37,7 @@ export async function GET(req: NextRequest) {
         const slug = searchParams.get('slug');
 
         if (!slug) {
-            return new NextResponse('Slug is required', { status: 400 });
+            return new NextResponse('Slug is required. (V2_DEBUG_MARKER)', { status: 400 });
         }
 
         const likes = await redis.get<number>(`likes:${slug}`);
