@@ -11,6 +11,13 @@ import { calculateReadingTime } from '@/lib/readingTime';
 import { LikeButton } from '@/components/LikeButton';
 import { ViewCounter } from '@/components/ViewCounter';
 
+export async function generateStaticParams() {
+    const posts = await reader.collections.posts.all();
+    return posts.map((post) => ({
+        slug: post.slug,
+    }));
+}
+
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params;
     const post = await reader.collections.posts.read(slug);

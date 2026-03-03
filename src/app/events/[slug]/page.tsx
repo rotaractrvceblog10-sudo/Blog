@@ -5,6 +5,13 @@ import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { Calendar, Clock, MapPin } from 'lucide-react';
 
+export async function generateStaticParams() {
+    const events = await reader.collections.events.all();
+    return events.map((event) => ({
+        slug: event.slug,
+    }));
+}
+
 export default async function EventDetailPage({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params;
     const event = await reader.collections.events.read(slug);
@@ -32,8 +39,8 @@ export default async function EventDetailPage({ params }: { params: Promise<{ sl
                         <div className="mb-4">
                             <span
                                 className={`inline-block rounded-full px-4 py-2 text-sm font-medium ${event.status === 'Upcoming'
-                                        ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400'
-                                        : 'bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-400'
+                                    ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400'
+                                    : 'bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-400'
                                     }`}
                             >
                                 {event.status}
